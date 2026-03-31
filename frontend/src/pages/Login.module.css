@@ -1,0 +1,152 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #FF6B6B 0%, #FFE66D 50%, #4ECDC4 100%);
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgDecor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.bgDecor span {
+  position: absolute;
+  font-size: 48px;
+  opacity: 0.15;
+  animation: float 6s ease-in-out infinite;
+}
+.bgDecor span:nth-child(1) { top: 8%; left: 5%;  animation-delay: 0s; }
+.bgDecor span:nth-child(2) { top: 12%; right: 8%; animation-delay: 1s; }
+.bgDecor span:nth-child(3) { top: 55%; left: 3%;  animation-delay: 2s; }
+.bgDecor span:nth-child(4) { bottom: 15%; right: 5%; animation-delay: 0.5s; }
+.bgDecor span:nth-child(5) { bottom: 30%; left: 8%; animation-delay: 1.5s; }
+.bgDecor span:nth-child(6) { top: 35%; right: 3%; animation-delay: 3s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%       { transform: translateY(-20px) rotate(10deg); }
+}
+
+.card {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 32px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.logoIcon {
+  font-size: 64px;
+  line-height: 1;
+  margin-bottom: 8px;
+  animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+.logoTitle {
+  font-size: 28px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 6px;
+}
+.logoSub {
+  color: #718096;
+  font-size: 14px;
+}
+
+.tabs {
+  display: flex;
+  background: #F7FAFC;
+  border-radius: 12px;
+  padding: 4px;
+  margin-bottom: 24px;
+}
+.tab {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: #718096;
+  transition: all 0.2s;
+}
+.tabActive {
+  background: #fff;
+  color: #FF6B6B;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4A5568;
+}
+
+.roleSelect {
+  display: flex;
+  gap: 12px;
+}
+.roleBtn {
+  flex: 1;
+  padding: 14px;
+  border: 2px solid #E2E8F0;
+  border-radius: 14px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #718096;
+  transition: all 0.2s;
+}
+.roleBtnActive {
+  border-color: #FF6B6B;
+  background: #FFF5F5;
+  color: #FF6B6B;
+}
+
+.error {
+  background: #FFF5F5;
+  border: 1px solid #FED7D7;
+  color: #C53030;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.tip {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #A0AEC0;
+}

@@ -1,0 +1,136 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #FFF0F0 0%, #FFF9F0 100%);
+  padding: 0 0 32px;
+}
+
+.header {
+  background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+  padding: 48px 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+.headerLeft { display: flex; align-items: center; gap: 14px; }
+.avatar {
+  width: 56px; height: 56px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 32px;
+}
+.greeting { font-size: 20px; font-weight: 800; }
+.date { font-size: 13px; opacity: 0.85; margin-top: 2px; }
+
+.streakBadge {
+  background: rgba(255,255,255,0.25);
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* 剧情卡 */
+.storyCard {
+  margin: -16px 16px 16px;
+  background: #fff;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(255,107,107,0.15);
+}
+.storyLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: #FF6B6B;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+.storyChapter {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 20px;
+}
+.chapterIcon { font-size: 40px; }
+.chapterTitle { font-size: 18px; font-weight: 800; color: #2D3748; }
+.chapterDesc { font-size: 13px; color: #718096; margin-top: 4px; }
+
+/* 章节地图 */
+.chapterMap {
+  display: flex; align-items: center; gap: 4px;
+  padding: 12px 0 0;
+  border-top: 1px solid #F7FAFC;
+}
+.mapNode {
+  flex: 1;
+  height: 36px;
+  background: #F7FAFC;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  color: #A0AEC0;
+  transition: all 0.3s;
+}
+.mapNodeDone {
+  background: #DCFCE7;
+  color: #15803D;
+}
+.mapNodeCurrent {
+  background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(255,107,107,0.4);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100% { transform: scale(1.1); }
+  50% { transform: scale(1.15); }
+}
+
+/* 任务卡 */
+.missionCard {
+  margin: 0 16px 16px;
+  background: #fff;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+.missionHeader {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 18px;
+}
+.missionTitle { font-size: 16px; font-weight: 800; color: #2D3748; }
+.missionStats {
+  display: flex; align-items: center;
+  background: #F7FAFC; border-radius: 16px; padding: 16px;
+  margin-bottom: 4px;
+}
+.stat { flex: 1; text-align: center; }
+.statNum { font-size: 28px; font-weight: 900; color: #FF6B6B; }
+.statLabel { font-size: 12px; color: #718096; margin-top: 2px; }
+.statDivider { width: 1px; height: 40px; background: #E2E8F0; }
+.noMission {
+  color: #718096; font-size: 14px;
+  text-align: center; padding: 20px 0 16px;
+}
+
+/* 成就栏 */
+.achievements {
+  margin: 0 16px 16px;
+  display: flex; gap: 12px;
+}
+.achievement {
+  flex: 1;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.achieveIcon { font-size: 28px; margin-bottom: 6px; }
+.achieveVal { font-size: 24px; font-weight: 900; color: #2D3748; }
+.achieveLabel { font-size: 12px; color: #718096; margin-top: 2px; }
+
+.logoutBtn {
+  margin: 8px 16px 0;
+  display: block;
+}

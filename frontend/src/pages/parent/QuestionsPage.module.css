@@ -1,0 +1,358 @@
+.page {
+  padding: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.pageTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.totalBadge {
+  background: #e8f4f8;
+  color: #2d9cdb;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* Import Card */
+.importCard { margin-bottom: 20px; }
+
+/* ── Section header with AI badge ────────────────────────── */
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.aiBadgeOn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: linear-gradient(135deg, #e8f4ff, #f0e8ff);
+  color: #5a3d9a;
+  border: 1px solid #c4a8f5;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.aiBadgeOff {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #f4f4f4;
+  color: #888;
+  border: 1px solid #ddd;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.aiHint {
+  font-size: 0.82rem;
+  color: #666;
+  background: #fffbeb;
+  border: 1px solid #f5c800;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.aiHint code {
+  background: #fff3d0;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.82rem;
+}
+
+.aiLink {
+  display: inline-block;
+  margin-left: 8px;
+  color: #7c5cbf;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+
+/* ── 文件拖拽上传区 ────────────────────────────────────────── */
+.dropZone {
+  border: 2px dashed #c9d8e8;
+  border-radius: 12px;
+  padding: 24px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  background: #f8fbff;
+  margin-bottom: 14px;
+  user-select: none;
+}
+
+.dropZone:hover, .dropZone:focus {
+  border-color: var(--primary);
+  background: #fff5f5;
+  outline: none;
+}
+
+.dropZone.dragOver {
+  border-color: var(--primary);
+  background: #fff0f0;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.15);
+}
+
+.dropZone.parsingActive {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.uploadIcon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.uploadText {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.uploadText strong {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.uploadText span {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.uploadNote {
+  font-size: 0.75rem !important;
+  color: var(--text-muted) !important;
+}
+
+.parsingState {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  justify-content: center;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 0;
+}
+
+/* 解析结果提示 */
+.parseMsg {
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.parseMsgOk {
+  background: #f0faf3;
+  color: #2d7a4a;
+  border-left: 3px solid #6BCB77;
+}
+
+.parseMsgErr {
+  background: #fff5f5;
+  color: #c0392b;
+  border-left: 3px solid #FF6B6B;
+}
+
+/* 分隔线 */
+.divider {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin: 10px 0 12px;
+  position: relative;
+}
+
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 6px;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0 0 10px;
+}
+
+.hint code {
+  background: #f0f0f0;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+
+.batchInput {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  font-family: monospace;
+  resize: vertical;
+  margin-bottom: 10px;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.batchInput:focus { border-color: var(--primary); }
+
+.submitMsg {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #f8f9fa;
+}
+
+.inputHint {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 0 0 10px;
+  padding: 6px 10px;
+  background: #fffbeb;
+  border-radius: 6px;
+  border-left: 3px solid #F5C800;
+}
+
+/* Filter */
+.filterRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.filterTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex: 1;
+}
+
+.filterBtn {
+  border: 1.5px solid #e0e0e0;
+  background: white;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all 0.15s;
+}
+
+.filterBtn:hover, .filterBtn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+/* Question list */
+.questionList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.qRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  border-radius: 10px;
+  padding: 12px 14px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  border: 1px solid #f0f0f0;
+  transition: box-shadow 0.15s;
+}
+
+.qRow:hover { box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+
+.qIndex {
+  min-width: 28px;
+  height: 28px;
+  background: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.qContent { flex: 1; min-width: 0; }
+
+.qText {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.qAnswer {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.qMeta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.difficulty {
+  font-size: 0.7rem;
+  letter-spacing: -2px;
+}
+
+@media (max-width: 600px) {
+  .page { padding: 12px; }
+  .qMeta { flex-direction: column; align-items: flex-end; }
+}

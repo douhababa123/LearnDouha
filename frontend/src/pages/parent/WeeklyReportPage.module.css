@@ -1,0 +1,156 @@
+.page {
+  padding: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pageHeader {
+  margin-bottom: 24px;
+}
+
+.pageTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 4px;
+}
+
+.weekRange {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* AI summary card */
+.aiCard {
+  background: linear-gradient(135deg, #667eea22, #764ba222);
+  border: 1px solid #667eea44;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+
+.aiHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #667eea;
+  margin-bottom: 8px;
+}
+
+.aiIcon { font-size: 1.1rem; }
+
+.aiText {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Metrics */
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.metricBox {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  border: 1px solid #f0f0f0;
+}
+
+.metricIcon { font-size: 1.6rem; margin-bottom: 8px; }
+
+.metricValue {
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.metricLabel {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.metricSub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Sections */
+.section { margin-bottom: 16px; }
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: var(--text-dark);
+}
+
+.tagList { display: flex; flex-direction: column; gap: 8px; }
+
+.weakTag, .progressTag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.weakTag {
+  background: #fff5f5;
+  border-left: 3px solid #FF6B6B;
+  color: var(--text-dark);
+}
+
+.progressTag {
+  background: #f0fff4;
+  border-left: 3px solid #6BCB77;
+  color: var(--text-dark);
+}
+
+/* Recommend */
+.recommendCard {
+  background: linear-gradient(135deg, #ff9a9e22, #fecfef22);
+  border: 1px dashed #FF6B6B88;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-top: 4px;
+}
+
+.recommendTitle {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.recommendTags { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.recommendTag {
+  background: white;
+  border: 2px solid #FF6B6B;
+  color: #FF6B6B;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .metricsGrid { grid-template-columns: 1fr 1fr; }
+  .metricsGrid > :last-child { grid-column: 1 / -1; }
+  .page { padding: 16px; }
+}

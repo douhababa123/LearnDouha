@@ -1,0 +1,37 @@
+.page { display: flex; flex-direction: column; gap: 24px; max-width: 900px; }
+.pageTitle { font-size: 26px; font-weight: 900; color: #2D3748; }
+.sectionTitle { font-size: 17px; font-weight: 800; color: #2D3748; margin-bottom: 16px; }
+.allGood { text-align: center; padding: 32px; color: #718096; font-size: 15px; }
+
+/* 薄弱点 */
+.weakCard {}
+.weakList { display: flex; flex-direction: column; gap: 12px; }
+.weakItem {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px; background: #FFF5F5; border-radius: 14px;
+}
+.weakRank {
+  width: 28px; height: 28px; background: #FC8181; color: #fff;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 800; flex-shrink: 0;
+}
+.weakInfo { flex: 1; min-width: 0; }
+.weakTag { font-size: 15px; font-weight: 700; color: #2D3748; }
+.weakStats { font-size: 12px; color: #718096; margin-top: 2px; }
+.weakBar {
+  width: 80px; height: 6px; background: #FED7D7; border-radius: 3px; overflow: hidden; flex-shrink: 0;
+}
+.weakBarFill { height: 100%; background: #FC8181; border-radius: 3px; transition: width 0.5s; }
+
+/* 错题列表 */
+.wrongCard {}
+.wrongList { display: flex; flex-direction: column; gap: 10px; }
+.wrongItem {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+  padding: 14px; background: #F7FAFC; border-radius: 14px;
+  border-left: 3px solid #FC8181;
+}
+.wrongLeft { flex: 1; }
+.wrongText { font-size: 16px; font-weight: 600; color: #2D3748; margin-bottom: 8px; }
+.wrongMeta { display: flex; gap: 6px; flex-wrap: wrap; }
+.wrongDate { font-size: 12px; color: #A0AEC0; flex-shrink: 0; margin-top: 2px; }
